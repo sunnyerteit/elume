@@ -20,9 +20,31 @@ namespace main
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static pages.gripper GRIPPER;
+        public static pages.rov ROV;
+        public static pages.report REPORT;
         public MainWindow()
         {
             InitializeComponent();
+            GRIPPER = new pages.gripper();
+            ROV = new pages.rov();
+            REPORT = new pages.report();
+            FRAME.Content = ROV;
+        }
+
+        private void BUTTON_ROV_Click(object sender, RoutedEventArgs e)
+        {
+            FRAME.Content = ROV;
+        }
+
+        private void BUTTON_GRIPPER_Click(object sender, RoutedEventArgs e)
+        {
+            FRAME.Content = GRIPPER;
+        }
+
+        private void BUTTON_REPORT_Click(object sender, RoutedEventArgs e)
+        {
+            FRAME.Content = REPORT;
         }
     }
 }

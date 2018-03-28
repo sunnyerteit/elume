@@ -43,19 +43,18 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Grid>
-                            <Button Background="{x:Null}">
+                            <Button x:Name="BUTTON_ROV" Background="{x:Null}" Click="BUTTON_ROV_Click">
                                 
                                 <Label Margin="57.5,0,0,0" Content="ROV" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="White" />
                             </Button>
                         </Grid>
-
                         <Grid Grid.Column="1">
-                            <Button Background="{x:Null}">
+                            <Button x:Name="BUTTON_GRIPPER" Background="{x:Null}" Click="BUTTON_GRIPPER_Click">
                                 <Label Margin="57.5,0,0,0" Content="Gripper" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="White" />
                             </Button>
                         </Grid>
                         <Grid Grid.Column="2">
-                            <Button Background="{x:Null}">
+                            <Button x:Name="BUTTON_REPORT" Background="{x:Null}" Click="BUTTON_REPORT_Click">
                                 
                                 <Label Margin="57.5,0,0,0" Content="Report" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="White" />
                             </Button>
@@ -64,7 +63,7 @@
 
                 </Grid>
                 <Grid Grid.Row="1">
-                    
+                    <Frame x:Name="FRAME" NavigationUIVisibility="Hidden"></Frame>
                 </Grid>
             </Grid>
         </Grid>
