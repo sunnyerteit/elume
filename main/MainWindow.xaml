@@ -69,11 +69,11 @@
                     </Grid>
                 </Grid>
 
-                <Grid Grid.Row="1" Background="#FFD27282"></Grid>
+                <Grid Grid.Row="1" Background="#FFD27382"></Grid>
 
             </Grid>
             <!-- Vertical line -->
-            <Grid Grid.Column="1" Background="#FFD27282"></Grid>
+            <Grid Grid.Column="1" Background="#FFD27382"></Grid>
             <!-- Right veiw -->
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
@@ -140,8 +140,42 @@
                     </Grid>
 
                 </Grid>
-                <Grid Grid.Row="1">
-                    <Frame x:Name="FRAME" NavigationUIVisibility="Hidden"></Frame>
+                <Grid Grid.Row="1" Background="#FF383748">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180*"/>
+                        <RowDefinition Height="1370*"/>
+                    </Grid.RowDefinitions>
+                    <Label/>
+                    <Grid>
+                        <Label Content="Position:" Padding="0" Margin="16,15,0,0" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1"/>
+                        <Grid Margin="16,0" Height="54" VerticalAlignment="Bottom" Background="#FF302F3E">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Fill="#FFDFDFE1" Width="16" Height="16" Margin="16,16,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/position.png"/>
+                                </Rectangle.OpacityMask>
+
+                            </Rectangle>
+                            <Label Grid.Column="1" Content="Position:" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,20,0,0"/>
+                            <Label Grid.Column="2" Content="63.4502° N" FontFamily="Roboto Light" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,20,0,0"/>
+                            <Label Grid.Column="2" Content="10.3501° E" FontFamily="Roboto Light" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,32,0,0"/>
+                            <Label Grid.Column="3" Content="Depth:" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,20,0,0"/>
+                            <Label Grid.Column="3" Content="10.5m" FontFamily="Roboto Light" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,32,0,0"/>
+                            <Label Grid.Column="4" Content="SOG" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,20,0,0"/>
+                            <Label Grid.Column="4" Content="5.1km" FontFamily="Roboto Light" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,32,0,0"/>
+                            <Label Grid.Column="5" Content="Heading:" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,20,0,0"/>
+                            <Label Grid.Column="5" Content="MANUAL" FontFamily="Roboto Light" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="0,32,0,0"/>
+
+                        </Grid>
+                    </Grid>
+                    <Frame x:Name="FRAME" NavigationUIVisibility="Hidden" Grid.Row="1"></Frame>
                 </Grid>
             </Grid>
         </Grid>

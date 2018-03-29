@@ -5,10 +5,48 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:main.pages"
       mc:Ignorable="d" 
-      d:DesignHeight="775" d:DesignWidth="372"
-      Title="rov">
+      d:DesignHeight="685" d:DesignWidth="372"
+      Title="rov" Background="#FFF7ABAB">
 
-    <Grid Background="#FF54D318">
-        <Label Content="rov"/>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="16"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="288*"/>
+                <RowDefinition Height="72*"/>
+                <RowDefinition Height="68*"/>
+                <RowDefinition Height="68*"/>
+                <RowDefinition Height="68*"/>
+                <RowDefinition Height="68*"/>
+                <RowDefinition Height="667*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#FF302F3E">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Direction:" Padding="0" Margin="16.5,16.5,0,0" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1"/>
+                <Rectangle Fill="#FF898891" Width="89" Height="89" Margin="16,16,0,0">
+                    <Rectangle.OpacityMask>
+                        <ImageBrush ImageSource="/main;component/images/compass_1.png"/>
+                    </Rectangle.OpacityMask>
+
+                </Rectangle>
+                <Label Content="Pitch and roll:" Padding="0" Margin="16.5,16.5,0,0" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1" Grid.Column="1"/>
+                <Rectangle Fill="#FFDFDFE1" Width="89" Height="89" Margin="16,16,0,0" Grid.Column="1" HorizontalAlignment="Left">
+                    <Rectangle.OpacityMask>
+                        <ImageBrush ImageSource="/main;component/images/test.png"/>
+                    </Rectangle.OpacityMask>
+
+                </Rectangle>
+
+            </Grid>
+            <Label Content="Alarms" Padding="0" Margin="0" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1" Grid.Row="2"/>
+
+        </Grid>
     </Grid>
 </Page>
