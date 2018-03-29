@@ -108,9 +108,9 @@
                         </Grid.ColumnDefinitions>
                         <Grid>
                             <Button x:Name="BUTTON_ROV" Click="BUTTON_ROV_Click" Background="#FF3C3B4D" BorderBrush="{x:Null}" Foreground="{x:Null}" Padding="0" BorderThickness="0">
-                                <Label Margin="16,0,0,0" Content="ROV" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FFDFDFE1" Padding="0" />
+                                <Label x:Name="LABEL_ROV" Margin="16,0,0,0" Content="ROV" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FFDFDFE1" Padding="0" />
                             </Button>
-                            <Rectangle Fill="#FFDFDFE1" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
+                            <Rectangle x:Name="IMAGE_ROV" Fill="#FFDFDFE1" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
                                 <Rectangle.OpacityMask>
                                     <ImageBrush ImageSource="images/rov.png"/>
                                 </Rectangle.OpacityMask>
@@ -118,9 +118,9 @@
                         </Grid>
                         <Grid Grid.Column="1">
                             <Button x:Name="BUTTON_GRIPPER" Background="#FF383748" Click="BUTTON_GRIPPER_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Padding="0" BorderThickness="0">
-                                <Label Margin="16,0,0,0" Content="Gripper" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FF898891" Padding="0" />
+                                <Label x:Name="LABEL_GRIPPER" Margin="16,0,0,0" Content="Gripper" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FF898891" Padding="0" />
                             </Button>
-                            <Rectangle Fill="#FF898891" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
+                            <Rectangle x:Name="IMAGE_GRIPPER" Fill="#FF898891" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
                                 <Rectangle.OpacityMask>
                                     <ImageBrush ImageSource="images/gripper.png"/>
                                 </Rectangle.OpacityMask>
@@ -129,9 +129,9 @@
                         <Grid Grid.Column="2">
                             <Button x:Name="BUTTON_REPORT" Background="#FF383748" Click="BUTTON_REPORT_Click" Padding="0" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
 
-                                <Label Margin="16,0,0,0" Content="Report" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FF898891" Padding="0" />
+                                <Label x:Name="LABEL_REPORT" Margin="16,0,0,0" Content="Report" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FF898891" Padding="0" />
                             </Button>
-                            <Rectangle Fill="#FF898891" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
+                            <Rectangle x:Name="IMAGE_REPORT" Fill="#FF898891" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
                                 <Rectangle.OpacityMask>
                                     <ImageBrush ImageSource="images/report.png"/>
                                 </Rectangle.OpacityMask>

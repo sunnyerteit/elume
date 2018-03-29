@@ -23,6 +23,13 @@ namespace main
         public static pages.gripper GRIPPER;
         public static pages.rov ROV;
         public static pages.report REPORT;
+
+        // Brushes
+        SolidColorBrush DARK_BACKGROUND = new SolidColorBrush();
+        SolidColorBrush LIGHT_BACKGROUND = new SolidColorBrush();
+
+        SolidColorBrush LIGHT_GRAY = new SolidColorBrush();
+        SolidColorBrush DARK_GRAY = new SolidColorBrush();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,21 +37,26 @@ namespace main
             ROV = new pages.rov();
             REPORT = new pages.report();
             FRAME.Content = ROV;
+
+            LIGHT_BACKGROUND.Color = Color.FromArgb(255, 60, 59, 77);
+            DARK_BACKGROUND.Color = Color.FromArgb(255, 56, 55, 72);
+            DARK_GRAY.Color = Color.FromArgb(255, 137, 136, 145);
+            LIGHT_GRAY.Color = Color.FromArgb(255, 223, 223, 225);
         }
 
         private void BUTTON_ROV_Click(object sender, RoutedEventArgs e)
         {
-            FRAME.Content = ROV;
+            Change_Tab(0);
         }
 
         private void BUTTON_GRIPPER_Click(object sender, RoutedEventArgs e)
         {
-            FRAME.Content = GRIPPER;
+            Change_Tab(1);
         }
 
         private void BUTTON_REPORT_Click(object sender, RoutedEventArgs e)
         {
-            FRAME.Content = REPORT;
+            Change_Tab(2);
         }
 
         public void Change_Tab(int tab)
@@ -52,14 +64,41 @@ namespace main
             if (tab == 0)
             {
                 FRAME.Content = ROV;
+                BUTTON_ROV.Background = DARK_BACKGROUND;
+                IMAGE_ROV.Fill = LIGHT_GRAY;
+                LABEL_ROV.Foreground = LIGHT_GRAY;
+                BUTTON_GRIPPER.Background = LIGHT_BACKGROUND;
+                IMAGE_GRIPPER.Fill = DARK_GRAY;
+                LABEL_GRIPPER.Foreground = DARK_GRAY;
+                BUTTON_REPORT.Background = LIGHT_BACKGROUND;
+                IMAGE_REPORT.Fill = DARK_GRAY;
+                LABEL_REPORT.Foreground = DARK_GRAY;
             }
             else if (tab == 1)
             {
                 FRAME.Content = GRIPPER;
+                BUTTON_ROV.Background = LIGHT_BACKGROUND;
+                IMAGE_ROV.Fill = DARK_GRAY;
+                LABEL_ROV.Foreground = DARK_GRAY;
+                BUTTON_GRIPPER.Background = DARK_BACKGROUND;
+                IMAGE_GRIPPER.Fill = LIGHT_GRAY;
+                LABEL_GRIPPER.Foreground = LIGHT_GRAY;
+                BUTTON_REPORT.Background = LIGHT_BACKGROUND;
+                IMAGE_REPORT.Fill = DARK_GRAY;
+                LABEL_REPORT.Foreground = DARK_GRAY;
             }
             else
             {
                 FRAME.Content = REPORT;
+                BUTTON_ROV.Background = LIGHT_BACKGROUND;
+                IMAGE_ROV.Fill = DARK_GRAY;
+                LABEL_ROV.Foreground = DARK_GRAY;
+                BUTTON_GRIPPER.Background = LIGHT_BACKGROUND;
+                IMAGE_GRIPPER.Fill = DARK_GRAY;
+                LABEL_GRIPPER.Foreground = DARK_GRAY;
+                BUTTON_REPORT.Background = DARK_BACKGROUND;
+                IMAGE_REPORT.Fill = LIGHT_GRAY;
+                LABEL_REPORT.Foreground = LIGHT_GRAY;
             }
         }
     }
