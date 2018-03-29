@@ -117,5 +117,18 @@
   <ItemGroup>
     <Resource Include="images\example.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\capture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\gripper.png" />
+    <Resource Include="images\rov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\report.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

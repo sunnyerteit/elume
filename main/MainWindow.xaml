@@ -20,6 +20,55 @@
                     <RowDefinition Height="9*"/>
                     <RowDefinition Height="891*"/>
                 </Grid.RowDefinitions>
+                <!-- Upper left corner -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid Margin="0" Height="30" VerticalAlignment="Bottom" Background="#4C302F3E">
+                            <Rectangle Width="17" Height="17" Grid.Row="7" HorizontalAlignment="Left" Margin="16,0,0,0" Fill="#FFDFDFE1">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/capture.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="Camera 1: angle 90" Margin="49,0,0,0" Padding="0" FontFamily="Roboto" FontSize="9" Foreground="White" VerticalAlignment="Center"/>
+                            <Rectangle Width="17" Height="17" Grid.Row="7" HorizontalAlignment="Right" Margin="0,0,16,0" Fill="#FFDFDFE1">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/capture.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Rectangle Width="17" Height="17" Grid.Row="7" HorizontalAlignment="Right" Margin="0,0,39,0" Fill="#FFDFDFE1">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/light.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid Margin="0" Height="30" VerticalAlignment="Bottom" Background="#4C302F3E">
+
+                            <Rectangle Width="17" Height="17" Grid.Row="7" HorizontalAlignment="Left" Margin="16,0,0,0" Fill="#FFDFDFE1">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/capture.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="Camera 2: angle 270" Margin="49,0,0,0" Padding="0" FontFamily="Roboto" FontSize="9" Foreground="White" VerticalAlignment="Center"/>
+                            <Rectangle Width="17" Height="17" Grid.Row="7" HorizontalAlignment="Right" Margin="0,0,16,0" Fill="#FFDFDFE1">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/capture.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Rectangle Width="17" Height="17" Grid.Row="7" HorizontalAlignment="Right" Margin="0,0,39,0" Fill="#FFDFDFE1">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/light.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
                 <Grid Grid.Row="1" Background="#FFD27282"></Grid>
 
             </Grid>
@@ -36,6 +85,21 @@
                         <RowDefinition Height="160*"/>
                         <RowDefinition Height="90*"/>
                     </Grid.RowDefinitions>
+                    <!--Top left-->
+                    <Grid Background="#FF302F3E">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Mission:" FontFamily="Roboto" FontSize="6" Foreground="#FF898891" Padding="0" Margin="16,8,0,0"/>
+                        <Label Content="Finne spektralsteiner" FontFamily="Roboto" Foreground="#FF898891" Padding="0" Margin="16,16,0,0" FontSize="10"/>
+
+                        <Label Content="Brumund Dal" FontFamily="Roboto" FontSize="10" Foreground="#FFDFDFE1" Padding="0" Margin="16,8,62.5,0" HorizontalAlignment="Right"/>
+                        <Label Content="Project manager" FontFamily="Roboto" Foreground="#FFDFDFE1" Padding="0" Margin="16,20,62.5,0" FontSize="6" HorizontalAlignment="Right"/>
+
+                        <Label Content="ROV:" FontFamily="Roboto" FontSize="6" Foreground="#FF898891" Padding="0" Margin="16,8,0,0" Grid.Row="1"/>
+                        <Label Content="Elvegris" FontFamily="Roboto" Foreground="#FF898891" Padding="0" Margin="16,16,0,0" FontSize="10" Grid.Row="1"/>
+                    </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -43,21 +107,35 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Grid>
-                            <Button x:Name="BUTTON_ROV" Background="{x:Null}" Click="BUTTON_ROV_Click">
-                                
-                                <Label Margin="57.5,0,0,0" Content="ROV" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="White" />
+                            <Button x:Name="BUTTON_ROV" Click="BUTTON_ROV_Click" Background="#FF3C3B4D" BorderBrush="{x:Null}" Foreground="{x:Null}" Padding="0" BorderThickness="0">
+                                <Label Margin="16,0,0,0" Content="ROV" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FFDFDFE1" Padding="0" />
                             </Button>
+                            <Rectangle Fill="#FFDFDFE1" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/rov.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
                         </Grid>
                         <Grid Grid.Column="1">
-                            <Button x:Name="BUTTON_GRIPPER" Background="{x:Null}" Click="BUTTON_GRIPPER_Click">
-                                <Label Margin="57.5,0,0,0" Content="Gripper" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="White" />
+                            <Button x:Name="BUTTON_GRIPPER" Background="#FF383748" Click="BUTTON_GRIPPER_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Padding="0" BorderThickness="0">
+                                <Label Margin="16,0,0,0" Content="Gripper" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FF898891" Padding="0" />
                             </Button>
+                            <Rectangle Fill="#FF898891" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/gripper.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
                         </Grid>
                         <Grid Grid.Column="2">
-                            <Button x:Name="BUTTON_REPORT" Background="{x:Null}" Click="BUTTON_REPORT_Click">
-                                
-                                <Label Margin="57.5,0,0,0" Content="Report" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="White" />
+                            <Button x:Name="BUTTON_REPORT" Background="#FF383748" Click="BUTTON_REPORT_Click" Padding="0" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+
+                                <Label Margin="16,0,0,0" Content="Report" VerticalAlignment="Center" FontSize="10" FontFamily="Roboto" Foreground="#FF898891" Padding="0" />
                             </Button>
+                            <Rectangle Fill="#FF898891" Width="25" Height="25" HorizontalAlignment="Left" Margin="16,0,0,0">
+                                <Rectangle.OpacityMask>
+                                    <ImageBrush ImageSource="images/report.png"/>
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
                         </Grid>
                     </Grid>
 

@@ -46,5 +46,21 @@ namespace main
         {
             FRAME.Content = REPORT;
         }
+
+        public void Change_Tab(int tab)
+        {
+            if (tab == 0)
+            {
+                FRAME.Content = ROV;
+            }
+            else if (tab == 1)
+            {
+                FRAME.Content = GRIPPER;
+            }
+            else
+            {
+                FRAME.Content = REPORT;
+            }
+        }
     }
 }
